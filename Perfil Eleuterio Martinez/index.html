@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleuterio Martínez: El Guardián de la Naturaleza Dominicana</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-green-200 selection:text-green-900">
+
+    <nav class="sticky top-0 z-50 bg-stone-100/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl font-bold text-green-900 tracking-tight">EM</span>
+                    <span class="ml-2 text-sm text-stone-600 border-l border-stone-400 pl-2">Ing. Eleuterio Martínez</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#biografia" class="text-stone-600 hover:text-green-700 transition-colors text-sm font-medium uppercase tracking-wider">Biografía</a>
+                    <a href="#impacto" class="text-stone-600 hover:text-green-700 transition-colors text-sm font-medium uppercase tracking-wider">Impacto</a>
+                    <a href="#areas" class="text-stone-600 hover:text-green-700 transition-colors text-sm font-medium uppercase tracking-wider">Áreas</a>
+                    <a href="#publicaciones" class="text-stone-600 hover:text-green-700 transition-colors text-sm font-medium uppercase tracking-wider">Publicaciones</a>
+                    <a href="#libros" class="px-4 py-2 rounded-full bg-green-700 text-white hover:bg-green-600 transition-colors text-sm font-medium uppercase tracking-wider shadow-sm flex items-center gap-2">
+                        <i class="fas fa-shopping-cart"></i> Tienda
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-stone-600 hover:text-green-700 focus:outline-none">
+                        <span class="text-2xl">☰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-100 border-t border-stone-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#biografia" class="block px-3 py-2 text-base font-medium text-stone-700 hover:text-green-700 hover:bg-stone-200 rounded-md">Biografía</a>
+                <a href="#impacto" class="block px-3 py-2 text-base font-medium text-stone-700 hover:text-green-700 hover:bg-stone-200 rounded-md">Impacto</a>
+                <a href="#areas" class="block px-3 py-2 text-base font-medium text-stone-700 hover:text-green-700 hover:bg-stone-200 rounded-md">Áreas Protegidas</a>
+                <a href="#publicaciones" class="block px-3 py-2 text-base font-medium text-stone-700 hover:text-green-700 hover:bg-stone-200 rounded-md">Publicaciones</a>
+                <a href="#libros" class="block px-3 py-2 text-base font-bold text-green-800 bg-green-50 hover:bg-green-100 rounded-md">🛒 Tienda de Libros</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-stone-900 overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-900 to-stone-900 opacity-90"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 flex flex-col items-center text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-stone-50 mb-6 leading-tight">
+                La Voz de los Bosques <br> <span class="text-green-400">Dominicanos</span>
+            </h1>
+            <p class="max-w-2xl text-xl text-stone-300 mb-10 font-light">
+                Ingeniero Forestal, Ecólogo y Defensor Incansable del Patrimonio Natural. Explorando la vida y obra de <strong>Eleuterio Martínez</strong>.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#biografia" class="px-8 py-3 bg-green-700 text-white rounded-full font-semibold hover:bg-green-600 transition-colors shadow-lg shadow-green-900/50">
+                    Conocer su Historia
+                </a>
+                <a href="#libros" class="px-8 py-3 bg-amber-600 text-white rounded-full font-semibold hover:bg-amber-500 transition-colors shadow-lg flex items-center justify-center gap-2">
+                    <i class="fas fa-book-open"></i> Ver Libros Disponibles
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="biografia" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+                <div class="mb-6">
+                    <span class="text-green-700 font-bold uppercase tracking-widest text-sm">Perfil Profesional</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mt-2">Una Vida Dedicada a la Ciencia y la Conservación</h2>
+                </div>
+                <p class="text-lg text-stone-600 mb-6 leading-relaxed">
+                    Eleuterio Martínez es una de las figuras más respetadas en la ecología de la República Dominicana. Como Ingeniero Forestal y Presidente de la Academia de Ciencias, ha dedicado décadas a la investigación de los ecosistemas tropicales y la defensa de las áreas protegidas.
+                </p>
+                
+                <div class="bg-white rounded-xl shadow-sm border border-stone-200 overflow-hidden">
+                    <div class="flex border-b border-stone-200">
+                        <button onclick="switchTab('academic')" id="tab-academic" class="flex-1 py-4 text-center text-sm font-semibold text-stone-600 hover:bg-stone-50 focus:outline-none transition-colors tab-active">
+                            Formación
+                        </button>
+                        <button onclick="switchTab('roles')" id="tab-roles" class="flex-1 py-4 text-center text-sm font-semibold text-stone-600 hover:bg-stone-50 focus:outline-none transition-colors">
+                            Liderazgo
+                        </button>
+                        <button onclick="switchTab('awards')" id="tab-awards" class="flex-1 py-4 text-center text-sm font-semibold text-stone-600 hover:bg-stone-50 focus:outline-none transition-colors">
+                            Reconocimientos
+                        </button>
+                    </div>
+                    <div class="p-6 h-64 overflow-y-auto" id="tab-content">
+                        </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6">
+                <div class="bg-green-50 p-6 rounded-xl border border-green-100">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">🛡️ Defensa Ambiental</h3>
+                    <p class="text-stone-700">
+                        Conocido por su firme postura en la protección de áreas críticas como <strong>Loma Miranda</strong> y <strong>Bahía de las Águilas</strong>, utilizando la ciencia como escudo contra la explotación insostenible.
+                    </p>
+                </div>
+                <div class="bg-stone-100 p-6 rounded-xl border border-stone-200">
+                    <h3 class="text-xl font-bold text-stone-900 mb-3">📚 Divulgación Científica</h3>
+                    <p class="text-stone-700">
+                        Autor de numerosas obras que documentan la flora y fauna de la isla, asegurando que el conocimiento sobre la biodiversidad dominicana sea accesible para futuras generaciones.
+                    </p>
+                </div>
+                <div class="bg-amber-50 p-6 rounded-xl border border-amber-100">
+                    <h3 class="text-xl font-bold text-amber-900 mb-3">🌍 Visión Global</h3>
+                    <p class="text-stone-700">
+                        Promotor incansable de las <strong>Reservas de la Biosfera</strong> ante la UNESCO, integrando a la República Dominicana en la red mundial de conservación.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impacto" class="py-20 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-green-700 font-bold uppercase tracking-widest text-sm">Análisis de Impacto</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mt-2">La Huella Ecológica de su Trabajo</h2>
+                <p class="mt-4 text-stone-600 max-w-3xl mx-auto">
+                    A través de su gestión y activismo, el Ing. Martínez ha influido directamente en la preservación de miles de kilómetros cuadrados de ecosistemas vitales.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex flex-col">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-bold text-stone-900">Enfoque de Investigación</h3>
+                        <p class="text-sm text-stone-500">Distribución estimada de sus esfuerzos por tipo de ecosistema.</p>
+                    </div>
+                    <div class="bg-stone-50 rounded-xl p-6 border border-stone-200 flex-grow flex items-center justify-center">
+                        <div class="chart-container">
+                            <canvas id="ecosystemChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-bold text-stone-900">Hitos de Conservación (Décadas)</h3>
+                        <p class="text-sm text-stone-500">Volumen de publicaciones y áreas defendidas activamente.</p>
+                    </div>
+                    <div class="bg-stone-50 rounded-xl p-6 border border-stone-200 flex-grow flex items-center justify-center">
+                        <div class="chart-container">
+                            <canvas id="timelineChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="areas" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                    <h2 class="text-3xl font-bold text-stone-900 mb-4">Guardían de las Reservas</h2>
+                    <p class="text-stone-600 mb-6">
+                        La labor del Ing. Martínez se extiende por toda la geografía nacional. Seleccione una región para conocer su aporte específico en la preservación.
+                    </p>
+                    <div class="space-y-3" id="area-buttons">
+                        </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div id="area-display" class="bg-white rounded-2xl p-8 shadow-lg h-full border border-stone-200 relative overflow-hidden transition-all duration-500">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 text-9xl">🌿</div>
+                        <h3 id="area-title" class="text-2xl font-bold text-green-800 mb-2">Seleccione una Zona</h3>
+                        <div class="h-1 w-20 bg-green-500 mb-6"></div>
+                        <p id="area-desc" class="text-stone-600 text-lg leading-relaxed mb-6">
+                            Explore las áreas donde la intervención científica y activista de Eleuterio Martínez ha marcado la diferencia.
+                        </p>
+                        <div id="area-stats" class="grid grid-cols-2 gap-4 hidden">
+                            <div class="p-4 bg-stone-50 rounded-lg">
+                                <span class="block text-xs text-stone-500 uppercase">Ecosistema Principal</span>
+                                <span class="block font-bold text-stone-800" id="stat-eco">-</span>
+                            </div>
+                            <div class="p-4 bg-stone-50 rounded-lg">
+                                <span class="block text-xs text-stone-500 uppercase">Rol Desempeñado</span>
+                                <span class="block font-bold text-stone-800" id="stat-role">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publicaciones" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-stone-200">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-10">
+            <div>
+                <span class="text-green-700 font-bold uppercase tracking-widest text-sm">Biblioteca Verde</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mt-2">Aportes Bibliográficos</h2>
+            </div>
+            <div class="mt-4 md:mt-0">
+                <select id="pub-filter" class="bg-white border border-stone-300 text-stone-700 py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent cursor-pointer">
+                    <option value="all">Todas las Categorías</option>
+                    <option value="book">Libros</option>
+                    <option value="article">Artículos/Ensayos</option>
+                    <option value="report">Informes Técnicos</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="publications-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+    </section>
+
+    <section id="libros" class="py-24 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block py-1 px-3 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider mb-2">Disponible en Amazon</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-stone-900">Catálogo de Obras Selectas</h2>
+                <p class="mt-4 text-stone-600 max-w-2xl mx-auto text-lg">
+                    Adquiera las ediciones impresas directamente en Amazon para apoyar la difusión del conocimiento ecológico.
+                </p>
+            </div>
+
+            <div id="book-catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                </div>
+            
+            <div class="mt-12 text-center">
+                 <a href="https://www.amazon.com/s?k=Eleuterio+Martinez+Libros" target="_blank" class="text-stone-500 hover:text-amber-600 underline text-sm transition-colors">
+                    Ver todos los resultados para Eleuterio Martínez en Amazon &rarr;
+                 </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Sobre este Proyecto</h3>
+                <p class="text-sm leading-relaxed">
+                    Esta plataforma es un tributo digital a la trayectoria del Ing. Eleuterio Martínez, consolidando información pública para resaltar la importancia de la ingeniería forestal y el activismo científico.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Enlaces de Interés</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-green-400 transition-colors">Academia de Ciencias RD</a></li>
+                    <li><a href="#" class="hover:text-green-400 transition-colors">Ministerio de Medio Ambiente</a></li>
+                    <li><a href="#libros" class="hover:text-green-400 transition-colors">Catálogo de Libros</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Contacto</h3>
+                <p class="text-sm mb-2">Para consultas académicas:</p>
+                <a href="#" class="inline-flex items-center px-4 py-2 bg-stone-800 border border-stone-700 rounded-lg hover:bg-stone-700 transition-colors text-white">
+                    ✉️ Contactar Oficina
+                </a>
+            </div>
+        </div>
+        <div class="mt-12 text-center text-xs text-stone-600 pt-8 border-t border-stone-800">
+            &copy; 2023 Perfil Digital Eleuterio Martínez.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
